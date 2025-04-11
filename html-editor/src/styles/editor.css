@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Editor specific styles */
+.editor-content {
+  @apply min-h-[300px] p-4 border border-gray-200 rounded-lg focus:outline-none focus:border-blue-500;
+}
+
+.editor-toolbar {
+  @apply border-b border-gray-200 p-4 bg-gray-50 space-x-1 flex flex-wrap gap-2;
+}
+
+.toolbar-button {
+  @apply p-2 hover:bg-gray-200 rounded transition-colors;
+}
+
+.toolbar-button.active {
+  @apply bg-blue-100 text-blue-600;
+}
+
+/* Source code view styles */
+.source-view {
+  @apply font-mono text-sm;
+}
+
+/* Prism.js theme customization */
+.prism-editor {
+  @apply bg-gray-50 rounded-lg p-4;
+}
+
+.token.tag {
+  @apply text-blue-600;
+}
+
+.token.attr-name {
+  @apply text-orange-600;
+}
+
+.token.attr-value {
+  @apply text-green-600;
+}
+
+.token.string {
+  @apply text-green-600;
+}
+
+.token.comment {
+  @apply text-gray-500;
+}
+
+/* Table styles */
+.editor-table {
+  @apply border-collapse border border-gray-300;
+}
+
+.editor-table td,
+.editor-table th {
+  @apply border border-gray-300 p-2;
+}
+
+/* Color picker styles */
+.color-picker-wrapper {
+  @apply relative;
+}
+
+.color-picker-popup {
+  @apply absolute z-50 mt-2 bg-white rounded-lg shadow-lg p-2;
+}
+
+/* Undo/Redo styles */
+.history-button {
+  @apply p-2 hover:bg-gray-200 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
